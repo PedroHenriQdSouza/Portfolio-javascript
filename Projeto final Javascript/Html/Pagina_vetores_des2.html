@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/header.css">
+    <link rel="stylesheet" href="../Css/Atividades.css">
+    <link rel="stylesheet" href="../Css/Pagina_inicial.css">
+    <title>Portfólio JS</title>
+
+</head>
+
+
+<body>
+    <!-- Menu -->
+    <header><!-- hover -->
+        <div class="nav_button">
+            <a href="Pagina_inicial.html" class="botao_home">
+                <img src="../images/home_button.png" alt="">
+            </a>
+        </div>
+        <nav class="menu">
+            <button class="acordeao">Condicionais</button>
+            <div class="painel1">
+                <div class="dropdown">
+                    <a href="Pagina_switch_case1.html">Switch case</a>
+                    <a href="Pagina_if_else1.html">If / Else</a>
+                </div>
+
+            </div>
+
+            <button class="acordeao">Laços de repetição</button>
+            <div class="painel painel2">
+                <div class="dropdown">
+                    <a href="Pagina_while1.html">While</a>
+                    <a href="Pagina_do_while1.html">Do... While</a>
+                    <a href="Pagina_for1.html">For</a>
+                </div>
+            </div>
+            <button class="acordeao">Vetores</button>
+            <div class="painel painel3">
+                <div class="dropdown">
+                    <a href="Pagina_vetores1.html">Vetor Unidimensional</a>
+                    <a href="Pagina_matrizes1.html">Vetor Bidimensional</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container1">
+        <h1>Arrays / Vetor Unidimensional</h1>
+        <div class="container2">
+            <div class="atividades">
+                <a href="Pagina_vetores_Ex.html">Exemplo</a>
+                <a href="Pagina_vetores1.html">Atividade 1</a>
+                <a href="Pagina_vetores2.html">Atividade 2</a>
+                <a href="Pagina_vetores3.html">Atividade 3</a>
+                <a href="Pagina_vetores4.html">Atividade 4</a>
+                <a href="Pagina_vetores_des1.html">Desafio 1</a>
+                <a href="Pagina_vetores_des2.html">Desafio 2</a>
+                <a href="Pagina_vetores_des3.html">Desafio 3</a>
+                <a href="Pagina_vetores_des4.html">Desafio 4</a>
+
+            </div>
+
+            <div class="container_att">
+                <div class="descricao">
+                    <h2 class="titulo_att">Desafio 2 - Encontrar numeros em um vetor de 10 posições</h2>
+                    <!-- Titulo da atividade -->
+
+                    <p class="instrucao"><!-- Descrição da atividade -->
+                        Professor “Ludovico Volpato” está de volta e deseja uma solução que alimente um
+                        vetor com 10 valores inteiros e também que solicite ao usuário a entrada de dados de
+                        um valor inteiro qualquer. A solução deverá fazer uma busca do valor, informado pelo
+                        usuário, no vetor e imprima a posição em que este foi encontrado ou se não foi
+                        encontrado.
+                    </p>
+                </div>
+                <form>
+                    <br>
+                    <!--Abrindo o componente textarea que, por sua vez, conterá
+                    os elementos que serão visualizados e executados na página.-->
+
+
+
+                    <!-- inicio da atividade -->
+                    <textarea name="fonte" cols="70" rows="20">
+
+                        <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/validaproc.js"></script>
+    <link rel="stylesheet" href="css/config.css">
+    <title>Desafio2</title>
+</head>
+<style>
+    section {
+        margin-top: 0 auto;
+    }
+
+    .cadinteiro {
+
+        width: 300px;
+        margin: 0 auto;
+        font-weight: bold;
+        margin-bottom: 10px;
+        background-color: rgb(243, 243, 243);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .cadinteiro input {
+        margin: 5px auto;
+        width: 100%;
+        padding: 5px 0;
+        border-radius: 5px;
+        border: 2px solid #f3f3f3;
+    }
+
+    .cadinteiro button {
+        width: 30%;
+        margin: 0 10%;
+        background-color: #a0ffb5;
+        border: none;
+        padding: 5px;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    label {
+        float: left;
+    }
+
+    h2 {
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+</style>
+
+<body>
+    <section>
+        <h2>Desafio 2 - Encontrar numeros em um vetor de 10 posições</h2>
+        <font face="arial">
+            <form name="frmnumint" action="#" method="get" onsubmit="return validaproc()">
+                <fieldset class="cadinteiro">
+
+                    <legend> Entrada de dados</legend>
+                    <br>
+
+                    <button type="submit">Enviar</button>
+                </fieldset>
+            </form>
+        </font>
+    </section>
+</body>
+<script>
+    function validaproc() {
+
+        let i, num = [], numero = 0, count = 0;
+
+        for (i = 0; i < 10; i++) {
+
+            num[i] = parseInt(prompt("Insira um numero na posição " + i + " do vetor \n"));
+            console.log(num[i] + " está na posição " + i);
+
+        }
+
+        numero = parseInt(prompt("Digite o número que deseja localizar no vetor: "));
+        console.log("\n");
+        for (i = 0; i < 10; i++) {
+
+            if (num[i] == numero) {
+                console.log(" O numero " + numero + " foi encontrado na posição " + i + " do vetor \n");
+
+                count = 1;
+            }
+
+        }
+        if (count != 1) {
+            console.log(" O numero " + numero + " não foi encontrado no vetor \n");
+        }
+        return false
+    }   
+</script>
+
+</html>
+                
+                    </textarea>
+                    <!--Finalizando o componente textarea-->
+
+
+
+                    <br><br>
+                    <input type="button" value="Testar Página" onclick="document.write(fonte.value);">
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    var acc = document.getElementsByClassName("acordeao");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            /* Toggle between adding and removing the "active" class,
+            to highlight the button that controls the panel */
+            this.classList.toggle("active");
+
+            /* Toggle between hiding and showing the active panel */
+            var painel1 = this.nextElementSibling;
+            if (painel1.style.display === "flex") {
+                painel1.style.display = "none";
+            } else {
+                painel1.style.display = "flex";
+            }
+        });
+    }
+</script>
+
+</html>

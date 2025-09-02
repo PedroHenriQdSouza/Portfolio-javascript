@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/header.css">
+    <link rel="stylesheet" href="../Css/Atividades.css">
+    <link rel="stylesheet" href="../Css/Pagina_inicial.css">
+    <title>Portfólio JS</title>
+
+</head>
+
+
+<body>
+    <!-- Menu -->
+    <header><!-- hover -->
+        <div class="nav_button">
+            <a href="Pagina_inicial.html" class="botao_home">
+                <img src="../images/home_button.png" alt="">
+            </a>
+        </div>
+        <nav class="menu">
+            <button class="acordeao">Condicionais</button>
+            <div class="painel1">
+                <div class="dropdown">
+                    <a href="Pagina_switch_case1.html">Switch case</a>
+                    <a href="Pagina_if_else1.html">If / Else</a>
+                </div>
+
+            </div>
+
+            <button class="acordeao">Laços de repetição</button>
+            <div class="painel painel2">
+                <div class="dropdown">
+                    <a href="Pagina_while1.html">While</a>
+                    <a href="Pagina_do_while1.html">Do... While</a>
+                    <a href="Pagina_for1.html">For</a>
+                </div>
+            </div>
+            <button class="acordeao">Vetores</button>
+            <div class="painel painel3">
+                <div class="dropdown">
+                    <a href="Pagina_vetores1.html">Vetor Unidimensional</a>
+                    <a href="Pagina_matrizes1.html">Vetor Bidimensional</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container1">
+        <h1>Do... While</h1>
+        <div class="container2">
+            <div class="atividades">
+                <a href="Pagina_do_while1.html">Atividade 1</a>
+                <a href="Pagina_do_while2.html">Atividade 2</a>
+                <a href="Pagina_do_while3.html">Atividade 3</a>
+            </div>
+
+            <div class="container_att">
+                <div class="descricao">
+                    <h2 class="titulo_att"> 3 - Calcular a média de 3 turmas e a media geral da escola</h2>
+                    <!-- Titulo da atividade -->
+
+                    <p class="instrucao"><!-- Descrição da atividade -->
+                        Uma escola tem 3 turmas e cada turma tem n alunos.
+                        Crie um programa que escreva, o total de alunos, por turma,
+                        com média superior ou igual a 7 e a média geral da escola.
+
+                    </p>
+                </div>
+                <form>
+                    <br>
+                    <!--Abrindo o componente textarea que, por sua vez, conterá
+                    os elementos que serão visualizados e executados na página.-->
+
+
+
+                    <!-- inicio da atividade -->
+                    <textarea name="fonte" cols="70" rows="20">
+
+                        <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/config.css">
+    <script src="js/validaProc.js"></script>
+    <title>Atividade 3</title>
+</head>
+<style>
+    section{
+  margin-top: 0 auto;
+}
+.cadinteiro{
+  
+  width: 300px;
+  margin: 0 auto;
+  font-weight: bold;
+  margin-bottom: 10px;
+  background-color: rgb(243, 243, 243);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.cadinteiro input{
+  margin: 5px auto;
+  width: 100%;
+  padding: 5px 0;
+  border-radius:5px;
+  border:2px solid #f3f3f3;
+}
+.cadinteiro button{
+  width: 30%;
+  margin: 0 10%;
+  background-color: #a0ffb5;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+}
+label{
+  float: left;
+}
+h2{
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom:10px;
+  font-size: 30px;
+}
+</style>
+
+<body>
+    <font style="font-family: Arial;">
+        <h2>Atividade 3- Média de notas"</h2>
+        <section>
+            <form name="executar" action="#" method="get" onsubmit="return validaproc()">
+
+                <fieldset class="cadinteiro">
+                    <br>
+                    <legend>Entrada de dados:</legend>
+
+                    <button type="submit">Enviar</button>
+
+                </fieldset>
+            </form>
+        </section>
+    </font>
+</body>
+
+</html>
+<script>
+    function validaproc() {
+
+    let somaMedia1 = 0, somaMedia2 = 0, somaMedia3 = 0;
+    let maior1 = 0, maior2 = 0, maior3 = 0;
+    let qtdAlunos1 = 0, qtdAlunos2 = 0, qtdAlunos3 = 0;
+    let mediaAluno1, mediaAluno2, mediaAluno3;
+    let mediaTurma1 = 0, mediaTurma2 = 0, mediaTurma3 = 0;
+
+    do {
+
+        mediaAluno1 = parseFloat(prompt("Insira a média do " + (qtdAlunos1 + 1) + "° Aluno da turma 1 (deixe o campo vazio para ir para a proxima turma)"));
+        if (isFinite(mediaAluno1)) {
+            somaMedia1 += mediaAluno1;
+            qtdAlunos1++
+        }
+
+        if (mediaAluno1 >= 7) {
+            maior1++
+        }
+
+    } while (isFinite(mediaAluno1));
+
+    alert(somaMedia1);
+    mediaTurma1 = somaMedia1 / qtdAlunos1;
+    alert(mediaTurma1);
+
+    do {
+
+        mediaAluno2 = parseFloat(prompt("Insira a média do " + (qtdAlunos2 + 1) + "° Aluno da turma 2 (deixe o campo vazio para ir para a proxima turma)"));
+        if (isFinite(mediaAluno2)) {
+            somaMedia2 += mediaAluno2;
+            qtdAlunos2++
+        }
+
+        if (mediaAluno2 >= 7) {
+            maior2++
+        }
+
+    } while (isFinite(mediaAluno2));
+
+    alert(somaMedia2);
+    mediaTurma2 = somaMedia2 / qtdAlunos2;
+    alert(mediaTurma2);
+
+    do {
+
+        mediaAluno3 = parseFloat(prompt("Insira a média do " + (qtdAlunos3 + 1) + "° Aluno da turma 3 (deixe o campo vazio para ir para a proxima turma)"));
+        if (isFinite(mediaAluno3)) {
+            somaMedia3 += mediaAluno3;
+            qtdAlunos3++
+        }
+
+        if (mediaAluno3 >= 7) {
+            maior3++
+        }
+
+    } while (isFinite(mediaAluno3));
+
+    alert(somaMedia3);
+    mediaTurma3 = somaMedia3 / qtdAlunos3;
+    alert(mediaTurma3);
+
+    console.log("A turma 1 tem: " + qtdAlunos1 + " alunos.\n");
+    console.log("A média da turma 1 é: " + mediaTurma1.toFixed(2));
+    console.log("Na turma 1 há " + maior1 + " Alunos com nota acima de 7\n");
+    console.log("")
+
+    console.log("A turma 2 tem: " + qtdAlunos2 + " alunos.");
+    console.log("A média da turma 2 é: " + mediaTurma2.toFixed(2));
+    console.log("Na turma 2 há " + maior1 + " Alunos com nota acima de 7\n");
+    console.log("")
+
+    console.log("A turma 3 tem: " + qtdAlunos3 + " alunos.");
+    console.log("A média da turma 3 é: " + mediaTurma3.toFixed(2));
+    console.log("Na turma 3 há " + maior1 + " Alunos com nota acima de 7\n");
+    console.log("")
+    let mediaGeral = (mediaTurma1 + mediaTurma2 + mediaTurma3) / 3;
+    console.log("A média geral da escola é: " + mediaGeral.toFixed(2));
+    
+    return false;
+
+}
+</script>
+                
+                    </textarea>
+                    <!--Finalizando o componente textarea-->
+
+
+
+                    <br><br>
+                    <input type="button" value="Testar Página" onclick="document.write(fonte.value);">
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    var acc = document.getElementsByClassName("acordeao");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            /* Toggle between adding and removing the "active" class,
+            to highlight the button that controls the panel */
+            this.classList.toggle("active");
+
+            /* Toggle between hiding and showing the active panel */
+            var painel1 = this.nextElementSibling;
+            if (painel1.style.display === "flex") {
+                painel1.style.display = "none";
+            } else {
+                painel1.style.display = "flex";
+            }
+        });
+    }
+</script>
+
+</html>

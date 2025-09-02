@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESTRUTURA SE JAVASCRIPT</title>
+    <link rel="stylesheet" href="css/config.css">
+    <script src="js/proc_index.js"></script>
+</head>
+<style>
+    section {
+        margin-top: 0 auto;
+    }
+
+    .cadnumint {
+
+        width: 300px;
+        margin: 0 auto;
+        font-weight: bold;
+        margin-bottom: 10px;
+        background-color: rgb(243, 243, 243);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .cadnumint input {
+        margin: 5px auto;
+        width: 100%;
+        padding: 5px 0;
+        border-radius: 5px;
+        border: 2px solid #f3f3f3;
+    }
+
+    .cadnumint button {
+        width: 30%;
+        margin: 0 10%;
+        background-color: #a0ffb5;
+        border: none;
+        padding: 5px;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    label {
+        float: left;
+    }
+
+    h2 {
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+</style>
+
+<body>
+    <section>
+        <h2>Atividade - Identifica idade - Estrutura Switch Case</h2>
+        <font face="arial">
+
+            <form name="frmnumint" action="#" method="get" onsubmit="return procFormulario()">
+                <fieldset class="cadnumint">
+
+                    <legend>Entrada de dados</legend>
+                    <br>
+                    <label for="numint">Digite sua idade:</label>
+                    <input type="text" name="txtnumint" id="numint">
+                    <br><br>
+
+                    <button type="reset">Limpar</button><button type="submit">Enviar</button>
+
+                </fieldset>
+            </form>
+
+        </font>
+    </section>
+
+</body>
+<script>
+    function procFormulario() {
+        /* Validação de campos */
+        if (document.getElementById('numint').value == "") {
+
+            alert("Preencha o campo de idade.");
+            document.frmnumint.txtnumint.focus();
+            return false;
+
+        } else {
+            let numint = parseInt(document.getElementById('numint').value)
+            switch (true) {
+                case (numint >= 0 && numint <= 3):
+                    console.log("Bebê");
+                    return false
+                    break;
+
+                case (numint >= 4 && numint <= 10):
+                    console.log("Criança");
+                    return false
+                    break;
+
+                case (numint >= 11 && numint <= 18):
+                    console.log("Adolecente");
+                    return false
+                    break;
+
+                case (numint > 18):
+                    console.log("Adulto")
+                    return false
+                    break;
+
+                default:
+                    alert("Idade inválida")
+                    return false
+            }
+        }
+    }
+</script>
+
+</html>

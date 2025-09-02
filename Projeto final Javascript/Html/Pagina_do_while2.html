@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/header.css">
+    <link rel="stylesheet" href="../Css/Atividades.css">
+    <link rel="stylesheet" href="../Css/Pagina_inicial.css">
+    <title>Portfólio JS</title>
+
+</head>
+
+
+<body>
+    <!-- Menu -->
+    <header><!-- hover -->
+        <div class="nav_button">
+            <a href="Pagina_inicial.html" class="botao_home">
+                <img src="../images/home_button.png" alt="">
+            </a>
+        </div>
+        <nav class="menu">
+            <button class="acordeao">Condicionais</button>
+            <div class="painel1">
+                <div class="dropdown">
+                    <a href="Pagina_switch_case1.html">Switch case</a>
+                    <a href="Pagina_if_else1.html">If / Else</a>
+                </div>
+
+            </div>
+
+            <button class="acordeao">Laços de repetição</button>
+            <div class="painel painel2">
+                <div class="dropdown">
+                    <a href="Pagina_while1.html">While</a>
+                    <a href="Pagina_do_while1.html">Do... While</a>
+                    <a href="Pagina_for1.html">For</a>
+                </div>
+            </div>
+            <button class="acordeao">Vetores</button>
+            <div class="painel painel3">
+                <div class="dropdown">
+                    <a href="Pagina_vetores1.html">Vetor Unidimensional</a>
+                    <a href="Pagina_matrizes1.html">Vetor Bidimensional</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container1">
+        <h1>Do... While</h1>
+        <div class="container2">
+            <div class="atividades">
+                <a href="Pagina_do_while1.html">Atividade 1</a>
+                <a href="Pagina_do_while2.html">Atividade 2</a>
+                <a href="Pagina_do_while3.html">Atividade 3</a>
+            </div>
+
+            <div class="container_att">
+                <div class="descricao">
+                    <h2 class="titulo_att"> 2 - Calcular tabuada</h2>
+                    <!-- Titulo da atividade -->
+
+                    <p class="instrucao"><!-- Descrição da atividade -->
+                        Ler um numero e mostrar a tabuada.
+
+                    </p>
+                </div>
+                <form>
+                    <br>
+                    <!--Abrindo o componente textarea que, por sua vez, conterá
+                    os elementos que serão visualizados e executados na página.-->
+
+
+
+                    <!-- inicio da atividade -->
+                    <textarea name="fonte" cols="70" rows="20">
+
+                        <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/config.css">
+    <script src="js/validaproc.js"></script>
+    <title>Atividade 2</title>
+</head>
+<style>
+    section {
+        margin-top: 0 auto;
+    }
+
+    .cadinteiro {
+
+        width: 300px;
+        margin: 0 auto;
+        font-weight: bold;
+        margin-bottom: 10px;
+        background-color: rgb(243, 243, 243);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .cadinteiro input {
+        margin: 5px auto;
+        width: 100%;
+        padding: 5px 0;
+        border-radius: 5px;
+        border: 2px solid #f3f3f3;
+    }
+
+    .cadinteiro button {
+        width: 30%;
+        margin: 0 10%;
+        background-color: #a0ffb5;
+        border: none;
+        padding: 5px;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    label {
+        float: left;
+    }
+
+    h2 {
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+</style>
+
+<body>
+    <font style="font-family: Arial;">
+        <h2>Atividade 2- Calcula tabuada</h2>
+        <section>
+            <form name="tabuadaInt" action="#" method="get" onsubmit="return validaproc()">
+
+                <fieldset class="cadinteiro">
+                    <br>
+                    <legend>Entrada de dados:</legend>
+
+                    <label for="tabuadade">Tabuada de:</label>
+                    <input type="text" name="txttabuadade" id="tabuadade">
+                    <button type="submit">Enviar</button>
+
+                </fieldset>
+            </form>
+        </section>
+    </font>
+</body>
+<script>
+    function validaproc() {
+
+        if (document.tabuadaInt.txttabuadade.value == "") {
+            document.tabuadaInt.txttabuadade.focus();
+            alert("Preencha o campo obrigatório");
+            return false;
+
+        } else {
+            let numero = parseInt(document.getElementById("tabuadade").value);
+            contador = 0
+            console.log("Tabuada de: ", numero)
+
+            do {
+                console.log(numero + "x" + contador + "=" + numero * contador);
+                contador = contador + 1;
+
+            } while (contador <= 10)
+            return false;
+
+        }
+    }
+</script>
+
+</html>
+                
+                    </textarea>
+                    <!--Finalizando o componente textarea-->
+
+
+
+                    <br><br>
+                    <input type="button" value="Testar Página" onclick="document.write(fonte.value);">
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    var acc = document.getElementsByClassName("acordeao");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            /* Toggle between adding and removing the "active" class,
+            to highlight the button that controls the panel */
+            this.classList.toggle("active");
+
+            /* Toggle between hiding and showing the active panel */
+            var painel1 = this.nextElementSibling;
+            if (painel1.style.display === "flex") {
+                painel1.style.display = "none";
+            } else {
+                painel1.style.display = "flex";
+            }
+        });
+    }
+</script>
+
+</html>

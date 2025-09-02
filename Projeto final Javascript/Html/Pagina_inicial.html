@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/header.css">
+    <link rel="stylesheet" href="../Css/Pagina_inicial.css">
+    <title>Portfólio JS</title>
+
+</head>
+
+<body>
+    <!-- Menu -->
+    <header><!-- hover -->
+        <div class="nav_button">
+            <a href="Pagina_inicial.html" class="botao_home">
+                <img src="../images/home_button.png" alt="">
+            </a>
+        </div>
+        
+            <button class="acordeao">Condicionais</button>
+            <div class="painel1">
+                <div class="dropdown">
+                    <a href="Pagina_switch_case1.html">Switch case</a>
+                    <a href="Pagina_if_else1.html">If / Else</a>
+                </div>
+            </div>
+            
+            <button class="acordeao">Laços de repetição</button>
+            <div class="painel painel2">
+                <div class="dropdown">
+                    <a href="Pagina_while1.html">While</a>
+                    <a href="Pagina_do_while1.html">Do... While</a>
+                    <a href="Pagina_for1.html">For</a>
+                </div>
+            </div>
+            <button class="acordeao">Vetores</button>
+            <div class="painel painel3">
+                <div class="dropdown">
+                    <a href="Pagina_vetores1.html">Vetor Unidimensional</a>
+                    <a href="Pagina_matrizes1.html">Vetor Bidimensional</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="texto">
+            <h1>PORTFÓLIO JAVASCRIPT</h1>
+            <p>Este website é um exercício com o objetivo de documentar todas as atividades javascript realizadas em
+                sala de aula e executa-las dentro do portfólio.</p>
+        </div>
+
+        <div class="imagem">
+
+            <img src="../images/Js_logo.png" alt="">
+
+        </div>
+    </div>
+
+</body>
+<script>
+    var acc = document.getElementsByClassName("acordeao");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var painel1 = this.nextElementSibling;
+    if (painel1.style.display === "flex") {
+      painel1.style.display = "none";
+    } else {
+      painel1.style.display = "flex";
+    }
+  });
+}
+</script>
+
+</html>
